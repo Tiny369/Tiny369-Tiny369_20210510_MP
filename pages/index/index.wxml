@@ -1,7 +1,7 @@
 <view class="indexContainer">
   <image class="userHead" src="/images/index/cart.jpg"></image>
-  <text class="userName">清醒的人</text>
-  <view class="goNewPage">
-    <text>开启小程序之旅</text>
+  <text class="userName">清醒的人 {{msg}}</text>
+  <view class="goNewPage" catchtap="handleParent">
+    <text catchtap="handleChild">开启小程序之旅</text>
   </view>
 </view>
