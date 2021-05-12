@@ -1,0 +1,31 @@
+.indexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#8ED145;
+  height: 100%;
+}
+
+.userHead {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin: 150rpx 0;
+}
+
+.userName {
+  font-size: 35rpx;
+  font-weight: 700;
+  margin: 100rpx 0;
+}
+
+.goNewPage {
+  width: 280rpx;
+  height: 60rpx;
+  border: 1rpx solid #FFFFFF;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
