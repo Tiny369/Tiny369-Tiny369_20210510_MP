@@ -1,0 +1,20 @@
+<!--pages/list/list.wxml-->
+<import src="../listTemplate/listTemplate.wxml"></import>
+
+<view class="listContainer">
+    <swiper indicator-dots indicator-color="white" indicator-active-color="red" circular autoplay interval="3000">
+        <swiper-item>
+            <image src="/images/detail/carousel/01.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/detail/carousel/02.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/detail/carousel/03.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/detail/carousel/04.jpg"></image>
+        </swiper-item>
+    </swiper>
+    <template is="listTem"></template>
+</view>

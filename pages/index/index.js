@@ -8,11 +8,20 @@ Page({
     msg:'初始数据'
   },
 
-  handleParent (){
-    console.log('parent');
-  },
-  handleChild (){
-    console.log('child');
+  /*   
+    handleParent (){
+      console.log('parent');
+    },
+    handleChild (){
+      console.log('child');
+    }, 
+  */
+  
+  // 点击按钮，路由跳转至List页面
+  toList (){
+    wx.navigateTo({
+      url:'/pages/list/list'
+    })
   },
 
   /**
