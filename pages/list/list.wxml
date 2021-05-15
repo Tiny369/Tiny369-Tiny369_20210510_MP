@@ -1,4 +1,4 @@
-<!--pages/list/list.wxml-->
+<!-- 文章列表页 -->
 <import src="../listTemplate/listTemplate.wxml"></import>
 
 <view class="listContainer">
@@ -16,5 +16,9 @@
             <image src="/images/detail/carousel/04.jpg"></image>
         </swiper-item>
     </swiper>
-    <template is="listTem"></template>
+    <block  wx:for="{{listArr}}" wx:key="index">
+        <view class="blockTit" data-index="{{index}}" bindtap="toDetail">
+            <template is="listTem" data="{{...item}}"></template>
+        </view>
+    </block>
 </view>

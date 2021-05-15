@@ -1,18 +1,35 @@
 // pages/list/list.js
+
+// 引入自定义的list数据
+let listDataArray = require('../../datas/list-data.js')
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        listArr:[]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.setData({
+            listArr:listDataArray.list_data
+        })
+    },
 
+    // 点击跳转至详情页面 
+    toDetail (event){
+        console.log(event);
+        // 获取下标
+        let index = event.currentTarget.dataset.index
+        wx.navigateTo({
+            // 使用query形式传参
+          url: '/pages/detail/detail?index='+index,
+        })
     },
 
     /**

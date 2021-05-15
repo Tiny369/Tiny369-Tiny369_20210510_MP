@@ -1,3 +1,5 @@
+<!-- 首页 -->
+
 <view class="indexContainer">
   <image class="userHead" src="/images/index/cart.jpg"></image>
   <text class="userName">清醒的人 {{msg}}</text>

@@ -1,0 +1,45 @@
+<!-- 详情页面 -->
+
+<!-- <image class="bigImg" src="/images/detail/carousel/02.jpg"></image>
+<view class="avatar_media_date">
+  <image src="/images/avatar/0.png"></image>
+  <text>新华社发布于</text>
+  <text>2015.05.15</text>
+</view>
+<text class="title">尚硅谷</text>
+<view class="collect_share">
+  <image src="/images/icon/collection-anti.png"></image>
+  <image src="/images/icon/share.png"></image>
+</view>
+<view class="collect_share">
+  <image src="/images/icon/collection-anti.png"></image>
+  <image src="/images/icon/share.png"></image>
+</view>
+<view class="article_details">
+  <text class="article_title">转发此文章</text>
+  <text
+    class="article_content">让每一个IT人,都直接或间接地受到过尚硅谷帮助!尚硅谷由一群有活力、有理想、有责任、有担当的尚硅谷人组成,我们将不负青春,为传播IT技术、为软件行业的健康的生态发展贡献力量。</text>
+</view> -->
+
+<view class="detailContainer">
+  <image class="detail_header" src="{{detailObj.detail_img}}"></image>
+  <image class="musicImg" src="/images/music/music-start.png"></image>
+  <view class="detail_author_date">
+    <image src="{{detailObj.avatar}}"></image>
+    <text>{{detailObj.author}}</text>
+    <text>发布于</text>
+    <text>{{detailObj.date}}</text>
+  </view>
+  <text class="detail_company">{{detailObj.title}}</text>
+  <view class="detail_collection_share">
+    <view class="col_share_img">
+      <image bindtap="handleCollection" src="{{isColleced ?'/images/icon/collection.png':'/images/icon/collection-anti.png'}}" ></image>
+      <image src="/images/icon/share.png"></image>
+    </view>
+    <view class="line"></view>
+  </view>
+  <view class="detail_article_details">
+    <button open-type="share">转发此文章</button>
+    <text class="detail_content">{{detailObj.detail_content}}</text>
+  </view>
+</view>

@@ -3,6 +3,8 @@
 .temContainer {
     display: flex;
     flex-direction: column;
+    padding-bottom: 15rpx;
+    border-bottom: 1rpx solid #489B81;
 }
 
 .avatar_date image {

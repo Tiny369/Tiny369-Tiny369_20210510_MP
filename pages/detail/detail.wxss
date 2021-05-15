@@ -1,0 +1,69 @@
+/* pages/detail/detail.wxss */
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail_header {
+  width: 100%;
+  height: 400rpx;
+}
+
+.musicImg {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 250rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.detail_author_date {
+  display: flex;
+  align-items: center;
+}
+.detail_author_date image {
+  width: 70rpx;
+  height: 70rpx;
+  padding: 15rpx;
+}
+.detail_author_date text {
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+
+.detail_company {
+  font-size: 33rpx;
+  font-weight: bold;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+
+.col_share_img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 80rpx;
+}
+.col_share_img image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+}
+
+.detail_article_details {
+  display: flex;
+  flex-direction: column;
+}
+/* .detail_article_details .article_title {
+  text-align: center;
+  font-size: 35rpx;
+  margin: 15rpx;
+} */
+.detail_article_details .detail_content {
+  font-size: 28rpx;
+  text-indent: 1.5em;
+  line-height: 50rpx;
+}

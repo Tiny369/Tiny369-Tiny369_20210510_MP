@@ -2,17 +2,26 @@
 <template name="listTem">
     <view class="temContainer">
         <view class="avatar_date">
-            <image src="/images/avatar/0.png"></image>
-            <text>2021.5.12</text>
+            <!-- <image src="/images/avatar/0.png"></image> -->
+            <image src="{{avatar}}"></image>
+            <!-- <text>2021.5.12</text> -->
+            <text>{{date}}</text>
         </view>
-        <text class="caption">清醒的人</text>
-        <image class="tepImg" src="/images/detail/carousel/02.jpg"></image>
-        <text class="details">让每一个IT人,都直接或间接地受到过尚硅谷帮助!尚硅谷由一群有活力、有理想、有责任、有担当的尚硅谷人组成,我们将不负青春,为传播IT技术、为软件行业的健康的生态发展贡献力量。</text>
+        <!-- <text class="caption">清醒的人</text> -->
+        <text class="caption">{{title}}</text>
+        <!-- <image class="tepImg" src="/images/detail/carousel/02.jpg"></image> -->
+        <image class="tepImg" src="{{detail_img}}"></image>
+        <!-- <text class="details">让每一个IT人,都直接或间接地受到过尚硅谷帮助!尚硅谷由一群有活力、有理想、有责任、有担当的尚硅谷人组成,我们将不负青春,为传播IT技术、为软件行业的健康的生态发展贡献力量。</text> -->
+        <text class="details">{{detail_content}}</text>
         <view class="star_view">
-            <image src="/images/icon/none-star.png"></image>
+            <!-- <image src="/images/icon/none-star.png"></image>
             <text>15566</text>
             <image src="/images/icon/view.png"></image>
-            <text>99999</text>
+            <text>99999</text> -->
+            <image src="{{detail_love_image1}}"></image>
+            <text>{{love_count}}</text>
+            <image src="{{detail_love_image2}}"></image>
+            <text>{{attention_count}}</text>
         </view>
     </view>
 </template>

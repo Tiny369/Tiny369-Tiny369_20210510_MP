@@ -37,7 +37,7 @@ Page({
     
     // 修改状态数据
     // vue中修改:this.xxx = value
-    // 小程序中修改:this.data.xxx = value
+    // 小程序中修改: this.setData({msg:value})
     setTimeout(() => {
       this.setData({
         msg:'修改之后的数据'
