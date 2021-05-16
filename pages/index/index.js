@@ -19,9 +19,17 @@ Page({
   
   // 点击按钮，路由跳转至List页面
   toList (){
-    wx.navigateTo({
+    // 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
+    /*  
+      wx.navigateTo({
+        url:'/pages/list/list'
+      }) 
+    */
+    wx.switchTab({
       url:'/pages/list/list'
-    })
+    }) 
+
+
   },
 
   /**
