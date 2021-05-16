@@ -1,6 +1,7 @@
 <!-- 详情页面 -->
 
 <!-- <image class="bigImg" src="/images/detail/carousel/02.jpg"></image>
+<image class="musicImg" src="/images/music/music-start.png" ></image>
 <view class="avatar_media_date">
   <image src="/images/avatar/0.png"></image>
   <text>新华社发布于</text>
@@ -22,8 +23,8 @@
 </view> -->
 
 <view class="detailContainer">
-  <image class="detail_header" src="{{detailObj.detail_img}}"></image>
-  <image class="musicImg" src="/images/music/music-start.png"></image>
+  <image class="detail_header" src="{{isMusicPlay?detailObj.music.coverImgUrl:detailObj.detail_img}}"></image>
+  <image class="musicImg" src="{{isMusicPlay?'/images/music/music-start.png':'/images/music/music-stop.png'}}" bindtap="handleMusicPlay"></image>
   <view class="detail_author_date">
     <image src="{{detailObj.avatar}}"></image>
     <text>{{detailObj.author}}</text>

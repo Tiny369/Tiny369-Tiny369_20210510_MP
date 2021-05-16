@@ -2,6 +2,10 @@
 // 引入自定义数据
 let detailDataArray = require('../../datas/list-data.js')
 
+// 获取全局App的实例
+let appInstance = getApp()
+// console.log(appInstance);
+
 Page({
 
   /**
@@ -11,7 +15,9 @@ Page({
     // 初始对象
     detailObj: {},
     // 是否收藏，初始状态为false未收藏
-    isColleced:false
+    isColleced:false,
+    // 是否播放音乐，初始状态为false未播放
+    isMusicPlay:false
   },
 
   /**
@@ -33,6 +39,24 @@ Page({
         isColleced: oldStorage[index]
       })
     }
+
+    // 处理音乐播放的状态
+    let { isPlay,pageIndex } = appInstance.globalData
+    if(isPlay && pageIndex === index){
+      // 修改音乐播放的状态为true
+      this.setData({
+        isMusicPlay:true
+      })
+    }
+
+    // 监听音乐停止事件
+    wx.onBackgroundAudioStop(()=>{
+      console.log('音乐停止');
+      this.setData({
+        isMusicPlay: false
+      })
+      appInstance.globalData.isPlay = false
+    })
 
   },
 
@@ -56,12 +80,44 @@ Page({
     // 收藏的状态永远只有一个键值对
     // let obj = {}
     // 解决思路，获取之前的收藏的对象
-    let obj = wx.getStorageSync('isColleced')
+    let obj = wx.getStorageSync('isColleced') || {}
     // 判断obj是否有值
-    obj = obj ? obj : {}
+    // obj = obj ? obj : {}
     // 给对象添加键值对
     obj[index] = isColleced
     wx.setStorageSync('isColleced', obj)
+  },
+
+  // 音乐是否播放的点击事件函数
+  handleMusicPlay (){
+    // wx.onBackgroundAudioStop(function callback)  每次点击都会触发，没有必要把音乐停止的监听放在这里
+    let isMusicPlay = !this.data.isMusicPlay
+    // 点击时的状态切换
+    this.setData({
+      isMusicPlay
+    })
+    // 解构获取数据中的音乐外链和标题和图片
+    let { dataUrl,title,coverImgUrl } = this.data.detailObj.music
+    if(isMusicPlay){  // 音乐播放
+      // 音乐播放api
+      wx.playBackgroundAudio({
+        dataUrl,
+        title,
+        coverImgUrl
+      })
+      // 将当前播放的状态存入全局的实例中
+      appInstance.globalData.isPlay = true 
+      appInstance.globalData.pageIndex = this.data.index
+    }else{  // 音乐停止
+      // 音乐停止api
+      wx.stopBackgroundAudio()
+      appInstance.globalData.isPlay = false
+      // 播放时已经修改下标
+      // appInstance.globalData.pageIndex = this.data.index
+    }
+
+    
+
   },
 
   /**
@@ -112,4 +168,5 @@ Page({
   onShareAppMessage: function () {
 
   }
+  
 })

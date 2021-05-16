@@ -23,7 +23,7 @@ Page({
 
     // 点击跳转至详情页面 
     toDetail (event){
-        console.log(event);
+        // console.log(event);
         // 获取下标
         let index = event.currentTarget.dataset.index
         wx.navigateTo({

@@ -17,9 +17,13 @@ let list_data = [
     attention_count: 66,
     detail: '并可以在手机上体验该小程序的实际效果。',
     music: {
-      dataUrl: 'http://up.mcyt.net/down/46100.mp3', // 音乐链接
-      title: 'IF-Ken Arai',   // 音乐标题
-      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
+      // dataUrl: 'http://up.mcyt.net/down/46100.mp3', // 音乐链接
+      dataUrl: 'https://www.ytmp3.cn/down/74134.mp3', // 音乐链接
+      // title: 'IF-Ken Arai',   // 音乐标题
+      title: '将故事写成我们',   // 音乐标题
+      // coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
+      coverImgUrl: 'https://bkimg.cdn.bcebos.com/pic/908fa0ec08fa513d16d1abc6326d55fbb2fbd9ab?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto',
+      
     },
     postId: 0
   },
@@ -65,9 +69,9 @@ let list_data = [
     attention_count: 66,
     detail: '并可以在手机上体验该小程序的实际效果。',
     music: {
-      dataUrl: 'http://up.mcyt.net/down/46100.mp3', // 音乐链接
-      title: 'IF-Ken Arai',   // 音乐标题
-      coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
+      dataUrl: 'https://www.ytmp3.cn/down/54181.mp3', // 音乐链接
+      title: '昨日青空',   // 音乐标题
+      coverImgUrl: 'https://bkimg.cdn.bcebos.com/pic/00e93901213fb80eab34cb8039d12f2eb8389484?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto',
     },
     postId: 2
   },

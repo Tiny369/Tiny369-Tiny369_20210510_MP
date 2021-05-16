@@ -1,5 +1,12 @@
 App({
 
+  globalData:{
+    // 是否播放
+    isPlay: false,
+    // 页面下标
+    pageIndex: null
+  },
+
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */

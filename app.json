@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/list/list",
     "pages/index/index",
+    "pages/list/list",
     "pages/detail/detail"
   ],
   "window": {
@@ -10,5 +10,6 @@
     "navigationBarTitleText": "MiaoXiao",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": ["audio", "location"]
 }
