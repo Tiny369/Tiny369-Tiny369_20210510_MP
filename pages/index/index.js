@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg:'初始数据'
+    msg:'清醒的人',
+    userInfo:{}
   },
 
   /*   
@@ -37,36 +38,59 @@ Page({
    */
   onLoad: function (options) {
     // 发送ajax请求，前后端交互
-    console.log('onLoad');
+    // console.log('onLoad');
     // 获取data中的数据
-    console.log(this.data.msg); // this:当前页面的实例对象  
+    // console.log(this.data.msg); // this:当前页面的实例对象  
     // vue中：初始化数据被数据劫持代理给了实例对象  this.msg
     // 小程序中：data中的数据没有进行数据劫持和代理 this.data.msg
     
     // 修改状态数据
     // vue中修改:this.xxx = value
     // 小程序中修改: this.setData({msg:value})
-    setTimeout(() => {
+    /* setTimeout(() => {
       this.setData({
         msg:'修改之后的数据'
       })  // 修改的动作：同步
       console.log(this.data.msg); 
-    }, 3000);
+    }, 3000); */
 
+    // 获取用户信息
+    wx.getUserInfo({
+      success: (res) => {
+        // console.log(res);
+        this.setData({
+          userInfo:res.userInfo
+        })
+      },
+      fail: () => {
+        console.log('获取用户信息失败');
+      }
+    })
+
+  },
+
+  // 点击获取用户信息
+  handleGetUserInfo (res){
+    // console.log(res);
+    if(res.detail.userInfo){
+      this.setData({
+        userInfo:res.detail.userInfo
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log('onReady');
+    // console.log('onReady');
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('onShow');
+    // console.log('onShow');
   },
 
   /**

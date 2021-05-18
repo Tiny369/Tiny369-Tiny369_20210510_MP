@@ -12,6 +12,14 @@
   border-radius: 50%;
   margin: 150rpx 0;
 }
+.getInfo {
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 250rpx;
+  font-size: 25rpx;
+}
 
 .userName {
   font-size: 35rpx;

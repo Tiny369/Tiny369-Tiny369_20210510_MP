@@ -1,8 +1,11 @@
 <!-- 首页 -->
 
 <view class="indexContainer">
-  <image class="userHead" src="/images/index/cart.jpg"></image>
-  <text class="userName">清醒的人 {{msg}}</text>
+  <!-- <image class="userHead" src="/images/index/cart.jpg"></image> -->
+  <image wx:if="{{userInfo.avatarUrl}}" class="userHead"  src="{{userInfo.avatarUrl}}"></image>
+  <button wx:else class="getInfo" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">点击获取用户信息</button>
+  <!-- <text class="userName">清醒的人 {{msg}}</text> -->
+  <text class="userName">{{userInfo.nickName}}  {{msg}}</text>
   <view class="goNewPage" catchtap="toList">
     <text>开启小程序之旅</text>
   </view>
